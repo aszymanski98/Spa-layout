@@ -1,0 +1,93 @@
+.team {
+    .cards-holder {
+        .card-item {
+            position: relative;
+            height: auto;
+            margin-bottom: 120px;
+            border: 0;
+
+            &:last-of-type() {
+                margin-bottom: 100px;
+            }
+
+            &:hover {
+                box-shadow: none;
+                .card-personals {
+                    transform: translate(0, 50%);
+
+                    .card-personals-content {
+                        box-shadow: $shadow;
+
+                        .card-socials {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            .card-portrait {
+                width: 100%;
+                height: auto;
+            }
+
+            .card-personals {
+                width: 100%;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                transition: $time;
+                transform: translate(0, 60%);
+
+                .card-personals-content {
+                    margin: 0 auto;
+                    padding: 30px 30px;
+                    background-color: white;
+                    width: 80%;
+                    transition: $time;
+
+                    h4 {
+                        margin: 0;
+                    }
+
+                    p {
+                        margin: 0 0 15px 0;
+                    }
+
+                    .card-socials {
+                        line-height: 40px;
+                        font-size: 20px;
+                        margin: 10px 0;
+
+                        opacity: 0;
+                        transition: $time;
+                    }
+                }
+            }
+
+            @media all and (min-width: $large) {
+
+
+                margin-bottom: 100px;
+
+                &:hover {
+                    .card-personals {
+                        transform: translate(0, 55%);
+                    }
+
+                    .card-personals-content {
+                        box-shadow: $shadow;
+                    }
+                }
+
+                .card-personals {
+                    transform: translate(0, 65%);
+
+                    .circle {
+                        margin: 0 5px !important;
+                    }
+                }
+
+            }
+        }
+    }
+}

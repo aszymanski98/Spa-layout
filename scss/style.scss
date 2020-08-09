@@ -1,0 +1,27 @@
+@import 'base/normalize';
+@import 'utils/imports';
+@import 'utils/variables';
+@import 'utils/mixins';
+
+@import 'vendors/slick';
+@import 'vendors/slick-theme';
+
+@import 'components/buttons';
+@import 'components/icons';
+@import 'components/inputs';
+@import 'components/cards';
+
+@import 'base/global';
+
+@import 'layout/nav';
+@import 'layout/header';
+@import 'layout/about';
+@import 'components/slider';
+@import 'layout/team';
+@import 'layout/contact-appointment';
+@import 'components/map';
+@import 'layout/form';
+@import 'layout/blog';
+@import 'layout/contact';
+@import 'layout/footer';
+

@@ -1,0 +1,30 @@
+.cards-holder {
+    .card-item {
+        padding: 20px 20px;
+        border: .5px solid #e2e5ea;
+        margin-bottom: 20px;;
+
+        .card-img {
+            width: 100%;
+        }
+
+        .card-content {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media all and (min-width: $large) {
+        .card-item {
+            transition: $time;
+
+            &:hover {
+                border: .5px solid transparent;
+                box-shadow: $shadow;
+            }
+
+            .card-content {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

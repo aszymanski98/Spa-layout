@@ -1,0 +1,40 @@
+/* Fonts */
+$primary-font: 'Roboto', sans-serif;
+$secondary-font: 'Bellota', cursive;
+
+$primary-font-size: 33px;
+$secondary-font-size: 25px;
+$mobile-header-size: 55px;
+
+$primary-font-size-large: 40px;
+$secondary-font-size-large: 16px;
+
+
+$letter-spaceing: 2px;
+
+/* Colors */
+$primary-color: #1ba4ce;
+$secondary-color: #473452;
+$header-color: #1e2528;
+
+$button-color: #30383b;
+
+$primary-text-color: #888;
+$secondary-text-color: #555;
+
+$shadow: 0 5px 20px #f0f0f0;
+
+/* Containers */
+$small-container: 100%;
+$large-container: 960px;
+$extra-large-container: 1140px;
+
+/* Animations */
+$time: .5s;
+
+/* Breakpoints */
+$extra-small: 480px;
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$extra-large: 1200px;

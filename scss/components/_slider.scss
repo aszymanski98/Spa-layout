@@ -1,0 +1,53 @@
+.slider-wraper {
+    width: 100%;
+
+    .slider-img {
+        position: relative;
+        
+        &:hover {
+            .feature-background {
+                opacity: 100;
+            }
+        }
+
+        .feature-background {
+            @include flexbox;
+            @include flex-align(center, center);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #1ba4ceb0;
+            opacity: 0;
+            transition: $time;
+
+            .feature-holder {
+                text-decoration: none;
+                .spa-icon {
+                    width: 50px;
+                    margin: 0 auto;
+                }
+
+                .feature-content {
+                    flex-basis: 100%;
+                    font-size: 28px;
+                    color: white;
+                    font-family: $secondary-font;
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .slick-track {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+.slick-arrow {
+    display: none !important;
+}

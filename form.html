@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz zapisu</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="container">
+            <div class="main-nav-holder">
+                <a href="index.html" class="brand"><img src="img/logo-txt.png" alt="Logo"></a>
+                <div class="mobile-hamburger"><i class="fas fa-bars"></i></div>
+                <div class="open-menu-holder">
+                    <div class="mobile-close"><i class="fas fa-times"></i></div>
+                    <ul class="menu">
+                        <li class="menu-item"><a href="index.html">Home</a></li>
+                        <li class="menu-item"><a href="index.html#about">About</a></li>
+                        <li class="menu-item"><a href="index.html#feature">Feature</a></li>
+                        <li class="menu-item"><a href="index.html#service">Service</a></li>
+                        <li class="menu-item"><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="map">
+        <div class="container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.9934381736057!2d-73.95190168459762!3d40.63002667934089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c244b2eefc2743%3A0x4540c4bd1622bab2!2s848%20E%2028th%20St%2C%20Brooklyn%2C%20NY%2011210%2C%20Stany%20Zjednoczone!5e0!3m2!1spl!2spl!4v1596189267629!5m2!1spl!2spl" width="1000" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </section>
+
+    <section class="appointment">
+        <div class="desktop-background" style="background-image: url(img/contact-bg.jpg);"></div>
+        <form id="appointment-form">
+            <input type="text" name="name" placeholder="name" id="appointment-name" class="appointment-field">
+            <input type="email" name="email" placeholder="email" id="appointment-email" class="appointment-field">
+            <input type="tel" name="number" placeholder="phone number" id="appointment-tel" class="appointment-field">
+            <select name="service" id="appointment-service" class="appointment-field">
+                <option value="" disabled selected>SELECT SERVICE</option>
+                <option value="body treatment">BODY TREATMENT</option>
+                <option value="detox">DETOX</option>
+                <option value="face treatment">FACE TREATMENT</option>
+                <option value="nails treatment">NAILS TREATMENT</option>
+            </select>
+            <input type="date" name="date" id="appointment-date" class="appointment-field">
+            <input type="time" name="time" id="appointment-time" class="appointment-field">
+            <textarea name="notes" placeholder="Your notes" id="appointment-notes" class="appointment-field"></textarea>
+            <button type="submit" id="appointment-button" class="appointment-button">Make an appointment</button>
+            <p id="appointment-message"></p>
+        </form>
+    </section>
+
+    <footer class="page-footer">
+        <img src="img/logo-txt.png" alt="Logo txt">
+        <nav class="footer-nav">
+            <ul class="footer-menu">
+                <li class="menu-item"><a href="index.html">Home</a></li>
+                <li class="menu-item"><a href="index.html#about">About</a></li>
+                <li class="menu-item"><a href="index.html#feature">Feature</a></li>
+                <li class="menu-item"><a href="index.html#service">Service</a></li>
+                <li class="menu-item"><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <p class="copy">© copywright 2020</p>
+    </footer>
+
+    <script src="js/form.js"></script>
+</body>
+
+</html>

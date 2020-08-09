@@ -1,0 +1,22 @@
+.about {
+    .container {
+        text-align: center;
+        .about-logo {
+            text-align: center;
+            img {
+                
+                height: 70px;
+            }
+
+            p {
+                font-size: $secondary-font-size;
+                letter-spacing: $letter-spaceing;
+                text-transform: uppercase;
+                color: $secondary-color;
+            }
+        }
+        .about-content {
+            margin-bottom: 30px;
+        }
+    }
+}

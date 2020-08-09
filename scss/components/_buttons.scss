@@ -1,0 +1,80 @@
+.primary-button {
+    background-color: $primary-color;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 15px 35px;
+    border: none;
+    font-family: $primary-font;
+
+    &:hover {
+        background-color: $button-color;
+    }
+}
+
+.round-button {
+    @extend .primary-button;
+    padding: 20px 50px;
+    border-radius: 50px;
+    font-size: 21px;
+    background-color: $button-color;
+
+    &:hover {
+        background: $primary-color !important;
+    }
+
+    @media all and (min-width: $large) {
+        font-size: 13px;
+        padding: 15px 40px;
+    }
+}
+
+.about-button {
+    @extend .round-button;
+    background-color: $primary-color;
+
+    &:hover {
+        background-color: $button-color !important;
+    }
+}
+
+.appointment-button {
+    @extend .round-button;
+    color: black;
+    background-color: white;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 30px;
+
+    &:hover {
+        background-color: $button-color !important;
+        color: white !important;
+    }
+
+    @media all and (min-width:$large){
+        font-size: 14px;
+    }
+}
+
+.appointment-index-button {
+    @extend .round-button;
+    position: absolute;
+    padding: 15px 0;
+    width: 80%;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+    color: $secondary-color;
+
+    &:hover {
+        color: white;
+    }
+
+    @media all and (min-width: $large) {
+        width: 50%;
+        top: 93%;
+        padding: 20px 100px;
+    }
+}
