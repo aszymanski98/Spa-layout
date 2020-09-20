@@ -1,80 +1,84 @@
 .appointment {
-    background-color: $primary-color;
-    padding: 0;
-    margin-bottom: 20px;
-    @include flexbox;
+  background-color: $primary-color;
+  padding: 0;
+  margin-bottom: 20px;
+  @include flexbox;
+
+  .desktop-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 40%;
+    display: none;
+  }
+
+  #appointment-form {
+    padding: 80px 40px;
+    width: 100%;
+
+    input [type="date"] {
+      cursor: text;
+    }
+
+    p {
+      font-size: 30px;
+      display: none;
+      text-align: center;
+      font-weight: 500;
+      text-transform: uppercase;
+
+      @media all and (min-width: $large) {
+        font-size: 12px;
+      }
+
+      &.sended {
+        display: inline-block;
+        color: green;
+      }
+
+      &.error {
+        display: inline-block;
+        color: red;
+      }
+    }
+  }
+
+  option[value=""][disabled] {
+    display: none;
+  }
+
+  @media all and (min-width: $large) {
+    text-align: left;
 
     .desktop-background {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        width: 40%;
-        display: none;
+      display: block;
     }
 
     #appointment-form {
-        padding: 80px 40px;
-        width: 100%;
+      width: 60%;
+      max-width: 620px;
 
-        p {
-            font-size: 30px;
-            display: none;
-            text-align: center;
-            font-weight: 500;
-            text-transform: uppercase;
+      p {
+        @include flexbox;
+        @include flex-align(center, center);
+      }
 
-            @media all and (min-width: $large) {
-                font-size: 12px;
-            }
+      input,
+      select,
+      p,
+      button {
+        width: 49%;
+      }
 
-            &.sended {
-                display: inline-block;
-                color: green;
-            }
-
-            &.error {
-                display: inline-block;
-                color: red;
-            }
-        }
+      textarea {
+        margin: 60px 0;
+      }
     }
+  }
 
-    option[value=""][disabled] {
-        display: none;
+  @media all and (min-width: $extra-large) {
+    #appointment-form {
+      max-width: 755px;
     }
-
-    @media all and (min-width: $large) {
-        text-align: left;
-
-        .desktop-background {
-            display: block;
-        }
-
-        #appointment-form {
-            width: 60%;
-            max-width: 620px;
-
-            p {
-                @include flexbox;
-                @include flex-align(center, center);
-            }
-
-            input,
-            select,
-            p,
-            button {
-                width: 49%;
-            }
-
-            textarea {
-                margin: 60px 0;
-            }
-        }
-    }
-
-    @media all and (min-width: $extra-large) {
-        #appointment-form {
-            max-width: 755px;
-        }
-    }
+  }
 }

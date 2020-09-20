@@ -760,6 +760,10 @@ body {
   color: #888;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 100%;
   width: 100%;
@@ -770,6 +774,12 @@ body {
 button,
 a {
   transition: 0.5s;
+}
+
+input,
+textarea,
+select {
+  outline: 0;
 }
 
 .bg {
@@ -792,7 +802,7 @@ a {
 .circle {
   width: 40px;
   height: 40px;
-  border: .2px solid gray;
+  border: 0.2px solid gray;
   border-radius: 50%;
   margin: 0 10px;
 }
@@ -844,6 +854,11 @@ section {
 }
 
 @media all and (min-width: 992px) {
+  section:target {
+    box-sizing: border-box;
+    padding-top: 155px;
+    margin-top: -115px;
+  }
   .bg {
     display: block;
   }
@@ -902,7 +917,7 @@ section {
   width: 100%;
   z-index: 10;
   background-color: white;
-  padding: 12px 0;
+  padding: 10px 0;
 }
 
 .main-nav .main-nav-holder {
@@ -1265,6 +1280,10 @@ header .header-utils .header-link {
   width: 100%;
 }
 
+.appointment #appointment-form input [type="date"] {
+  cursor: text;
+}
+
 .appointment #appointment-form p {
   font-size: 30px;
   display: none;
@@ -1328,7 +1347,9 @@ header .header-utils .header-link {
 }
 
 .blog {
-  padding-top: 40px;
+  background-color: white;
+  position: relative;
+  z-index: 2;
 }
 
 .blog .card-item {
@@ -1364,9 +1385,13 @@ header .header-utils .header-link {
 }
 
 #contact {
-  background-color: #1ba4ce;
   color: white;
   margin-bottom: 20px;
+  background-color: #1ba4ce;
+}
+
+#contact:target {
+  z-index: -10;
 }
 
 #contact h3 {
@@ -1374,7 +1399,7 @@ header .header-utils .header-link {
 }
 
 #contact .contact-form {
-  padding: 30px 0;
+  padding: 30px 23px;
 }
 
 #contact .contact-form p {

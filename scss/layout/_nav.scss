@@ -1,109 +1,107 @@
 .main-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: white;
+  padding: 10px 0;
+
+  .main-nav-holder {
+    @include flexbox;
+    justify-content: space-between;
+  }
+
+  .brand {
+    height: 50px;
+    display: inline-block;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .menu {
+    list-style: none;
+
+    .menu-item {
+      font-size: 50px;
+      text-transform: uppercase;
+      padding: 20px 0;
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  %mobile-controls {
+    font-size: 28px;
+    line-height: 50px;
+    cursor: pointer;
+  }
+
+  .mobile-hamburger {
+    @extend %mobile-controls;
+    i {
+      color: $primary-color;
+    }
+  }
+
+  .mobile-close {
+    @extend %mobile-controls;
+    color: white;
+    text-align: right;
+    height: 50px;
+  }
+
+  .open-menu-holder {
     position: fixed;
-    top: 0;
+    background-color: $primary-color;
+    max-width: 490px;
     width: 100%;
-    z-index: 10;
-    background-color: white;
-    padding: 12px 0;
+    padding: 12px 23px;
+    top: 0;
+    right: 0;
+    text-align: right;
+    display: none;
+
+    &.open {
+      display: block;
+    }
+  }
+
+  @media all and (min-width: $large) {
+    height: 115px;
 
     .main-nav-holder {
-        @include flexbox;
-        justify-content: space-between;
-    }
+      justify-content: flex-start;
+      position: fixed;
 
-    .brand {
-        height: 50px;
-        display: inline-block;
-
+      .brand {
         img {
-            height: 100%;
+          height: 70px;
         }
-    }
-
-    .menu {
-        list-style: none;
-
-        .menu-item {
-            font-size: 50px;
-            text-transform: uppercase;
-            padding: 20px 0;
-
-            a {
-                color: white;
-                text-decoration: none;
-            }
-        }
+      }
     }
 
     %mobile-controls {
-        font-size: 28px;
-        line-height: 50px;
-        cursor: pointer;
+      display: none;
     }
 
-    .mobile-hamburger {
-        @extend %mobile-controls;
-        i {
-            color: $primary-color;
-        }
-    }
-
-    .mobile-close {
-        @extend %mobile-controls;
-        color: white;
-        text-align: right;
-        height: 50px;
+    .menu {
+      @include menu;
     }
 
     .open-menu-holder {
-        position: fixed;
-        background-color: $primary-color;
-        max-width: 490px;
-        width: 100%;
-        padding: 12px 23px;
-        top: 0;
-        right: 0;
-        text-align: right;
-        display: none;
-
-        &.open {
-            display: block;
-        }
-
-
+      display: block;
+      position: static;
+      background-color: white;
+      width: auto;
+      position: static;
+      max-width: 100%;
+      padding: 0;
+      align-self: flex-start;
     }
-
-    @media all and (min-width: $large) {
-        height: 115px;
-
-        .main-nav-holder {
-            justify-content: flex-start;
-            position: fixed;
-
-            .brand {
-                img {
-                    height: 70px;
-                }
-            }
-        }
-
-        %mobile-controls {
-            display: none;
-        }
-
-        .menu {
-            @include menu;
-        }
-
-        .open-menu-holder {
-            display: block;
-            position: static;
-            background-color: white;
-            width: auto;
-            position: static;
-            max-width: 100%;
-            padding: 0;
-            align-self: flex-start;
-        }
-    }
+  }
 }

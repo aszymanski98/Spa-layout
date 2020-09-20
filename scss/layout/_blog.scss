@@ -1,32 +1,34 @@
 .blog {
-    padding-top: 40px;
-    .card-item {
-        height: 120%;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+  .card-item {
+    height: 120%;
 
-        h4 {
-            margin-top: 15px;
-        }
+    h4 {
+      margin-top: 15px;
+    }
+  }
+
+  .blog-info {
+    @include flexbox;
+    justify-content: center;
+    text-transform: uppercase;
+
+    color: $primary-text-color;
+    margin-top: 15px;
+
+    .line {
+      margin: 0 10px;
     }
 
-    .blog-info {
-        @include flexbox;
-        justify-content: center;
-        text-transform: uppercase;
+    p {
+      font-size: 18px;
+      margin: 0;
 
-        color: $primary-text-color;
-        margin-top: 15px;
-
-        .line {
-            margin: 0 10px;
-        }
-
-        p {
-            font-size: 18px;
-            margin: 0;
-
-            @media all and (min-width:$large) {
-                font-size: 12px !important;
-            }
-        }
+      @media all and (min-width: $large) {
+        font-size: 12px !important;
+      }
     }
+  }
 }
