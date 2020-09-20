@@ -21,14 +21,13 @@ Working demo of the project: https://aszymanski98.github.io/Spa-layout/
 Project is created with:
 * HTML 5
 * [SASS](https://sass-lang.com/)
-* [Fontawesome](https://fontawesome.com/): 5.13.1
-* [Normalize.css](https://necolas.github.io/normalize.css/): 8.0.1
 * [Slick slider](https://kenwheeler.github.io/slick/)
 * [JQuery](https://jquery.com/): 3.5.1
 
-
 ## Setup
-To run project in cloned repository open HTML file in your favorite browser (double click on the file, or right-click - and choose "Open with").
+To run project in cloned repository open HTML file in your favourite browser (double click on the file, or right-click - and choose "Open with").
 
 ## Sources
 * [Google fonts](https://fonts.google.com/) - Belotta and Roboto fonts
+* [Font Awesome](https://fontawesome.com/)
+* [Normalize.css](https://necolas.github.io/normalize.css/)
