@@ -18,6 +18,12 @@ html {
   margin: 0 auto;
 }
 
+section:target {
+  box-sizing: border-box;
+  padding-top: 90px;
+  margin-top: -50px;
+}
+
 button,
 a {
   transition: $time;
